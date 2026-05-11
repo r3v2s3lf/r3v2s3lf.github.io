@@ -2,7 +2,7 @@
 title: "HTB Jeeves"
 date: 2026-05-11 11:31:00 +0100
 categories: [CPTS Preparation]
-tags: [htb, machine, windows, Medium]
+tags: [htb, machine, windows, Medium, jenkins, keepass, pth]
 image: /assets/img/posts/jeeves/jeeves.png
 ---
 

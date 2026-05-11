@@ -2,7 +2,7 @@
 title: "HTB Fluffy"
 date: 2026-05-10 21:27:00 +0100
 categories: [CPTS Preparation]
-tags: [htb, machine, windows, Easy]
+tags: [htb, machine, windows, Easy, ntlmv2, shadow-credentials]
 image: /assets/img/posts/fluffy/fluffy.png
 ---
 **HTB Fluffy** is a Windows domain controller attack chain that starts with valid credentials, `writable SMB` access, and a malicious ZIP/libraries trick to capture p.agila’s NTLMv2 hash via `CVE-2025-24071`. After cracking that hash, I enumerated the domain with BloodHound/RustHound, abused group membership to reach winrm_svc, used `shadow credentials` to obtain service-account hashes, and then exploited ADCS `ESC16` to impersonate Administrator and gain full domain admin access.
