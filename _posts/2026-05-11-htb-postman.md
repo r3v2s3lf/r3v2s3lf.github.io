@@ -2,7 +2,7 @@
 title: "HTB Postman"
 date: 2026-05-11 19:56:00 +0100
 categories: [CPTS Preparation]
-tags: [htb, machine, linux, Easy, redis, webmin]
+tags: [HTB, Machine, Linux, Easy, Redis, Webmin]
 image: /assets/img/posts/postman/postman.png
 ---
 HTB Postman is a Linux machine centered on misconfigured services. I first used an `unauthenticated` Redis instance to write an SSH public key into `authorized_keys`, which gave me access as redis; from there I recovered a cracked SSH private key to move laterally to `Matt`, and finally exploited an old `Webmin` instance to obtain root.
