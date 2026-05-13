@@ -5,7 +5,7 @@ categories: [CPTS Preparation]
 tags: [HTB, Machine, Windows, Medium, Vulnlab, ADCS]
 image: /assets/img/posts/vulncicada/vulncicada.png
 ---
-
+**HTB VulnCicada** is a Windows machine where an NFS-exposed user account led to `PetitPotam` + `NTLM relay` to `AD CS`, yielding a DC machine certificate, a `PKINIT` TGT/`NTDS` dump, and full `Domain Administrator` takeover — it begins with discovery of exposed services and an NFS export, escalates by recovering credentials from a mounted profile, uses that user to enumerate `AD CS` and identify `ESC8`, coerces the DC to authenticate via `PetitPotam`, relays the authentication to the `certsrv` web endpoint to request a `DomainController` certificate, converts that certificate into a machine TGT through `PKINIT`, dumps `NTDS` using the machine account context to recover the `Administrator` NTLM hash, and finally authenticates as `Administrator` to gain complete domain control.
 ## Reconnaissance
 ### Scanning
 - Nmap (All ports)
