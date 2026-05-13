@@ -15,8 +15,6 @@ henry
 ```
 H3nry_987TGV!
 ```
-
-
 ## Reconnaissance
 ### Scanning
 - Nmap (All ports)
