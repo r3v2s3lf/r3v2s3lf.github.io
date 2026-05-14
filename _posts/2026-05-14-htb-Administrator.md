@@ -321,7 +321,7 @@ hashcat -a 0 -m 5200 Backup.psafe3 wordlists/rockyou.txt -d 1 -O
 ```
 Backup.psafe3:tekieromucho
 ```
-- [https://github.com/pwsafe/pwsafe](pwsafe)
+- [pwsafe](https://github.com/pwsafe/pwsafe)
 
 ```
 sudo dpkg -i passwordsafe-debian12-1.24-amd64.deb
