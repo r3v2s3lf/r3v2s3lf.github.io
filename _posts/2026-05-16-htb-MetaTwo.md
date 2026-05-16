@@ -5,6 +5,7 @@ categories: [CPTS Preparation]
 tags: [HTB, Machine, Linux, Easy]
 image: /assets/img/posts/metatwo/metatwo.png
 ---
+**HTB MetaTwo** is a Linux machine that starts with exploiting an unauthenticated `SQL injection` in the `BookingPress` WordPress plugin to dump password hashes, cracking the `manager` hash to authenticate to `WordPress`, then exploiting an authenticated `XXE` vulnerability in the `WordPress` Media Library to read `wp-config.php` and recover `FTP` credentials, pivoting through `FTP` to find `SMTP` credentials for SSH access, and escalating to `root` by cracking a `PGP` private key protecting a `Passpie` password store containing the root password.
 
 ## Reconnaissance
 ### Scanning
