@@ -21,6 +21,9 @@ PORT      STATE    SERVICE
 ```
 - NSE Scripts & Version
 ```
+nmap -sCV -p22,80,8065 10.129.38.242 --min-rate 1000 -nv
+```
+```
 PORT     STATE SERVICE VERSION                                                                                                                               
 22/tcp   open  ssh     OpenSSH 7.9p1 Debian 10+deb10u2 (protocol 2.0)                                                                                        
 | ssh-hostkey:                                                                                                                                               
