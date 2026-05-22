@@ -6,7 +6,7 @@ tags: [HTB, Machine, Windows, Medium, WSL]
 image: /assets/img/posts/hospital/hospital.png
 ---
 
-## Machine Information
+**HTB Hospital** is a Windows machine running a `WSL` backend that starts with uploading a `PHP` webshell to a file upload portal on port `8080`, exploiting a `GameOver(lay)` kernel vulnerability (`CVE-2023-2640/CVE-2023-32629`) inside the `WSL` Ubuntu instance to escalate to `root` and crack `drwilliams`'s shadow hash, authenticating to a `RoundCube` webmail instance and sending a malicious `.eps` file to exploit `Ghostscript` command injection (`CVE-2023-36664`) for a shell as `drbrown`, and recovering the Administrator password through `Meterpreter` keystroke logging.
 
 ## Reconnaissance
 
